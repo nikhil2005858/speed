@@ -1,2 +1,2 @@
 # speed
-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
+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
