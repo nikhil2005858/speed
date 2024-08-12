@@ -10,6 +10,8 @@ body{
 }
 .ul1{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     color:white;
     list-style-type: none;
     font-size: large;
