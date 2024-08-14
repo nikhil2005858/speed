@@ -102,6 +102,7 @@ project.html css
     margin: 5px;
     display: inline-flex;
     width: 300px;
+    height:250px;
     justify-items: center;
     align-items: center;
     border-radius: 10px;
