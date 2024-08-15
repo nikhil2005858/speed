@@ -177,3 +177,9 @@ about.html css
      color: aliceblue;
      font-size: larger;
 }
+.ab2{
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+}
+
