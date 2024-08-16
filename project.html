@@ -48,5 +48,32 @@
    <script src="index.js">
    
    </script>
+
+    <script>
+   
+   async function myproject() {
+   let fet = await fetch("https://microintel.github.io/microintel/project.json");
+   let xon = await fet.json();
+   let arda = ``;
+   for (let x in xon) {
+   let logo = xon[x]["projectlogo"];
+   let redu = xon[x]["redurl"];
+   let apro = xon[x]["aboutproject"];
+   let sda = `
+   <div class="cd1">
+   <a href="${redu}" >
+   <img id="img" class="pimg" src="${logo}" width="300px" height="200px">
+   <div class="link">${apro}</div>
+   </a>
+   </div>
+   `;
+   arda += sda;
+   }
+   document.getElementById('main1').innerHTML = arda;
+   }
+   
+   myproject();
+   
+    </script>
     </body>
 </head>
