@@ -192,4 +192,12 @@ about.html css
     align-items: center;
      box-shadow: 3px 5px 8px black;
 }
+.child{
+    width: 600px;
+    height: 50%;
+    box-shadow: 2px 4px 15px black;
+    font-family: sans-serif;
+   border-radius: 5px;
+  margin: 20px;
+}
 
