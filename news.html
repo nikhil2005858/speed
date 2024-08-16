@@ -16,14 +16,82 @@
         </ul>
         </div>
         <br>
-            <div id="main2">
-                <h3>loading..</h3>
-                
+                 <div class="opp"  style="margin-top: 10%; ">
+            <div>
+            <button onclick="xx('marvel')">Marvel</button>
+            <button onclick="xx('stock market')">Stocks</button>
+            <button onclick="xx('python')">Python</button>
+            <button onclick="xx('avatar the way of water')">Avatar</button>
             </div>
-       
-       
-
-   <script src="index.js">
+            <div class="inb">
+            
+            <input id="inp" placeholder="what about news do u want read.">
+            
+            
+            
+            <button onclick="xxx('inp')">Search</button>
+            </div><br>
+            <div>
+            <br>
+            <center>
+            <span id="load"></span>
+            
+            <div id="pare" class="par">
+            <center>
+            <div class="child"   >
+            
+            
+            </div>
+            
+            
+            
+            
+            
+            
+            <script type="text/javascript">
+            
+            async function xx(qq) {
+            document.getElementById('load').style.display="block";
+            document.getElementById('pare').innerHTML="";
+            let wq = qq;
+            let str = `https://newsdata.io/api/1/latest?apikey=pub_50746bae58827b7fc68ea59748a56c0b1cecb&q=${wq}`;
+            let f = await fetch(str);
+            let c = await f.json();
+            let rl = c["results"];
+            
+            for (let x of rl) {
+            let nt = x["title"];
+            let nl = x["link"];
+            let nd = x["description"];
+            let npd = x["pubDate"];
+            let nimg = x["image_url"];
+            let nll = x["language"];
+            document.getElementById('load').style.display="none";
+            if (nll === "english") {
+            
+            let newe = document.createElement("div");
+            newe.loading = "lazy";
+            newe.className = "child";
+            newe.innerHTML = `
+            <h2 text-transform: capitalize; ><b>${nt}</b></h2><br>
+            <img src="${nimg}" alt="${nt}" loading="lazy" width="300px" height:400px;><br>
+            <font>${nd}</font><br>
+            <font class="date">${npd}</font><br>
+            <font><a href="${nl}" target="_blank">Read More...</a></font>
+            `;
+            document.getElementById('pare').appendChild(newe);
+            }
+            
+            
+            }
+            }
+            
+            
+            function xxx(x) {
+            xx(document.getElementById(x).value);
+            }
+            
+            </script>
    
    </script>
     </body>
