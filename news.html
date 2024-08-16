@@ -16,21 +16,20 @@
         </ul>
         </div>
         <br>
-                 <div class="opp"  style="margin-top: 10%; ">
+        <div class="opp"  style="margin-top: 10%; ">
             <div class="opp1">
-            <button onclick="xx('marvel')">Marvel</button>
-            <button onclick="xx('stock market')">Stocks</button>
-            <button onclick="xx('python')">Python</button>
-            <button onclick="xx('avatar the way of water')">Avatar</button>
+            <button class="g1" onclick="xx('marvel')" style="width: 15%; padding: 1%; border:1px solid black; border-radius: 5px;">Marvel</button>
+            <button  class="g1" onclick="xx('stock market')" style="width: 15%; padding: 1%; border:1px solid black;  border-radius: 5px;">Stocks</button>
+            <button class="g1" onclick="xx('python')" style="width: 15%;padding: 1%; border:1px solid black;  border-radius: 5px;">Python</button>
+            <button class="g1" onclick="xx('avatar the way of water')" style="width: 15%; padding: 1%; border:1px solid black; border-radius: 5px;">Avatar</button>
             </div>
+            <br>
             <div class="inb">
             
-            <input id="inp" placeholder="what about news do u want read.">
-            
-            
-            
-            <button onclick="xxx('inp')">Search</button>
-            </div><br>
+            <input id="inp" size="90%" style="padding: 1%;border-radius: 10px;" placeholder="what about news do u want read.">
+            <button onclick="xxx('inp') " style="padding: 1%; border-radius: 5px;">Search</button><br>
+        
+            </div>
             <div>
             <br>
             <center>
@@ -38,7 +37,7 @@
             
             <div id="pare" class="par">
             <center>
-            <div class="child"   >
+            <div class="child"  >
             
             
             </div>
@@ -73,11 +72,11 @@
             newe.loading = "lazy";
             newe.className = "child";
             newe.innerHTML = `
-            <h2 text-transform: capitalize; ><b>${nt}</b></h2><br>
+            <font style='text-transform: capitalize;font-size: medium;'><b>${nt}</b></font><br>
             <img src="${nimg}" alt="${nt}" loading="lazy" width="300px" height:400px;><br>
             <font>${nd}</font><br>
-            <font class="date">${npd}</font><br>
-            <font><a href="${nl}" target="_blank">Read More...</a></font>
+            <font >${npd}</font><br>
+            <a href="${nl}" target="_blank">Read More...</a>
             `;
             document.getElementById('pare').appendChild(newe);
             }
